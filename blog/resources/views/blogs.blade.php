@@ -17,6 +17,10 @@
 
 
         <!-- start blog-pg-section -->
+        @foreach($myposts as $post)
+        <?php
+        $mytitle = str_replace(" ", "?", $post->title);
+        ?>
         <section class="blog-pg-section section-padding">
             <div class="container">
                 <div class="row">
@@ -24,20 +28,20 @@
                         <div class="blog-content">
                             <div class="post format-standard-image">
                                 <div class="entry-media">
-                                    <img src="./blog_files/img-4.jpg" alt="">
-                                    <div class="cat">SEO, SMM</div>
+                                    <img src="../uploads/file/{{$post->image}}" alt="">
+                                    <div class="cat">{{$post->content}}</div>
                                 </div>
                                 <div class="entry-meta">
-                                    <span>Feb 13, 2020 </span>
-                                    <span>By: <a href="https://seoul-html.itech-theme.com/blog.html#">Admim</a> </span>
+                                    <span>{{$post->created_at}} </span>
+                                    <span>By: {{$post->user_id()->first()->name}}
                                 </div>
                                 <div class="entry-details">
-                                    <h3><a href="https://seoul-html.itech-theme.com/blog.html#">Search engine optimization but I didn’t know where to begin contacted SEO Services USA</a></h3>
-                                    <p>Samples lay spread out on the table  Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with Collection of textile</p>
-                                    <a href="https://seoul-html.itech-theme.com/blog.html#" class="read-more">Read More</a>
+                                    <h3><a href="blog-single/{{$post->id}}/{{$mytitle}}">{{$post->title}}</a></h3>
+                                    <p>{{$post->description}}</p>
                                 </div>
                             </div>
-                            <div class="post format-standard-image">
+                            @endforeach
+                          <!--   <div class="post format-standard-image">
                                 <div class="entry-media">
                                     <img src="./blog_files/img-5.jpg" alt="">
                                     <div class="cat">SEO, SMM</div>
@@ -51,8 +55,8 @@
                                     <p>Samples lay spread out on the table  Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with Collection of textile</p>
                                     <a href="https://seoul-html.itech-theme.com/blog.html#" class="read-more">Read More</a>
                                 </div>
-                            </div>
-                            <div class="post format-video">
+                            </div> -->
+                           <!--  <div class="post format-video">
                                 <div class="entry-media video-holder">
                                     <img src="./blog_files/img-6.jpg" alt="">
                                     <a href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1" class="video-btn" data-type="iframe">
@@ -69,8 +73,8 @@
                                     <p>Samples lay spread out on the table  Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with Collection of textile</p>
                                     <a href="https://seoul-html.itech-theme.com/blog.html#" class="read-more">Read More</a>
                                 </div>
-                            </div>
-                            <div class="post format-standard">
+                            </div> -->
+                           <!--  <div class="post format-standard">
                                 <div class="cat">Adovcate, Law</div>
                                 <div class="entry-meta">
                                     <span>Feb 13, 2020 </span>
@@ -81,8 +85,8 @@
                                     <p>Samples lay spread out on the table  Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with Collection of textile</p>
                                     <a href="https://seoul-html.itech-theme.com/blog.html#" class="read-more">Read More</a>
                                 </div>
-                            </div>
-                            <div class="post format-gallery">
+                            </div> -->
+                            <!-- <div class="post format-gallery">
                                 <div class="entry-media">
                                     <div class="post-slider owl-carousel owl-theme owl-loaded owl-text-select-on">
                                         
@@ -99,8 +103,10 @@
                                     <p>Samples lay spread out on the table  Samsa was a travelling salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with Collection of textile</p>
                                     <a href="https://seoul-html.itech-theme.com/blog.html#" class="read-more">Read More</a>
                                 </div>
-                            </div>
-                            <div class="pagination-wrapper pagination-wrapper-left">
+                            </div> -->
+                            <!--instade of paginate-->
+                            <!--###############################################################################################################-->
+                            <!-- <div class="pagination-wrapper pagination-wrapper-left">
                                 <ul class="pg-pagination">
                                     <li>
                                         <a href="https://seoul-html.itech-theme.com/blog.html#" aria-label="Previous">
@@ -116,12 +122,14 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
+                            <!--end paginate-->
+                            <!--#################################################################################################################-->
                         </div>
                     </div>
                     <div class="col col-md-4">
                         <div class="blog-sidebar">
-                            <div class="widget about-widget">
+                           <!--  <div class="widget about-widget">
                                 <h3>About us</h3>
                                 <div class="img-holder">
                                     <img src="./blog_files/about-widget.jpg" alt="">
@@ -135,8 +143,8 @@
                                         <li><a href="https://seoul-html.itech-theme.com/blog.html#"><i class="ti-pinterest"></i></a></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="widget search-widget">
+                            </div> -->
+                           <!--  <div class="widget search-widget">
                                 <h3>Search</h3>
                                 <form>
                                     <div>
@@ -144,59 +152,10 @@
                                         <button type="submit"><i class="ti-search"></i></button>
                                     </div>
                                 </form>
-                            </div>
-                            <div class="widget category-widget">
-                                <h3>Categories</h3>
-                                <ul>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Digital Marketing <span>(2)</span></a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Web Analytics <span>(3)</span></a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Startup Business <span>(7)</span></a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Delivery <span>(5)</span></a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">SEO Marketing <span>(10)</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="widget recent-post-widget">
-                                <h3>Recent post</h3>
-                                <div class="posts">
-                                    <div class="post">
-                                        <div class="img-holder">
-                                            <img src="./blog_files/img-1.jpg" alt="">
-                                        </div>
-                                        <div class="details">
-                                            <h4><a href="https://seoul-html.itech-theme.com/blog.html#">Salesman and above it there hung a picture that he</a></h4>
-                                            <span class="date">13 Feb 2020</span>
-                                        </div>
-                                    </div>
-                                    <div class="post">
-                                        <div class="img-holder">
-                                            <img src="./blog_files/img-2.jpg" alt="">
-                                        </div>
-                                        <div class="details">
-                                            <h4><a href="https://seoul-html.itech-theme.com/blog.html#">Picture that he had recently out of an illustrated magazine</a></h4>
-                                            <span class="date">13 Feb 2020</span>
-                                        </div>
-                                    </div>
-                                    <div class="post">
-                                        <div class="img-holder">
-                                            <img src="./blog_files/img-3.jpg" alt="">
-                                        </div>
-                                        <div class="details">
-                                            <h4><a href="https://seoul-html.itech-theme.com/blog.html#">Recently cut out of an illustrated magazine distingur aelten</a></h4>
-                                            <span class="date">13 Feb 2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget tag-widget">
-                                <h3>Tags</h3>
-                                <ul>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Hosting</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Business</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Server</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">vps hosting</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog.html#">Manfacturing</a></li>
-                                </ul>
-                            </div>
+                            </div> -->
+                       
+                         
+                            
                         </div>
                     </div>
                 </div>

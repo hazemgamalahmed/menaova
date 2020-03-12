@@ -1,3 +1,5 @@
+@extends('header')
+@section('content')
    <!-- start page-title -->
         <section class="page-title">
             <div class="container">
@@ -348,3 +350,4 @@
         </section>
         <!-- end testimonials-section -->
 
+@endsection

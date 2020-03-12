@@ -55,37 +55,24 @@
                         </div>
 
                         <div class="contact-form">
-                            <form method="post" class="contact-validation-active" id="contact-form-main" novalidate="novalidate">
+                            <form method="post" action="{{url('insert/message')}}" class="contact-validation-active">
+                                {!! csrf_field() !!}
                                 <div>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name*">
+                                    <input type="text" class="form-control" name="name" placeholder="Name*">
                                 </div>
                                 <div>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email*">
+                                    <input type="email" class="form-control" name="email" placeholder="Email*">
                                 </div>
                                 <div>
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone*">
-                                </div>
-                                <div>
-                                    <select name="subject" class="form-control">
-                                        <option disabled="disabled" selected="">Contact subject</option>
-                                        <option>Subject 1</option>
-                                        <option>Subject 2</option>
-                                        <option>Subject 3</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="phone" placeholder="Phone*">
                                 </div>
                                 <div class="fullwidth">
-                                    <textarea class="form-control" name="note" id="note" placeholder="Case Description..."></textarea>
+                                    <textarea class="form-control" name="message" id="note" placeholder="Case Description..."></textarea>
                                 </div>
                                 <div class="submit-area">
                                     <button type="submit" class="theme-btn-s4">Submit It Now</button>
-                                    <div id="loader">
-                                        <i class="ti-reload"></i>
-                                    </div>
                                 </div>
-                                <div class="clearfix error-handling-messages">
-                                    <div id="success">Thank you</div>
-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                </div>
+                                
                             </form>
                         </div>
                     </div>
@@ -96,12 +83,12 @@
 
 
         <!--  start contact-map -->
-        <section class="contact-map-section">
+        <!-- <section class="contact-map-section">
             <h2 class="hidden">Contact map</h2>
             <div class="contact-map">
                 <iframe src="./contacts-us_files/embed.html" allowfullscreen=""></iframe>
             </div>
-        </section>
+        </section> -->
         <!-- end contact-map -->
 
 @endsection

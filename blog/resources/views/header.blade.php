@@ -54,7 +54,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="https://seoul-html.itech-theme.com/index.html"><img src="./blog_files/logo.png" alt=""></a>
+                        <a class="navbar-brand" href="https://www.sky-tech-eg.com/" target="_blank"><img src="{{url('../public/sky-tech-logo.png')}}" alt=""></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-left navigation-holder">
                         <button class="close-navbar"><i class="ti-close"></i></button>
@@ -66,22 +66,13 @@
                             <li class="menu-item-has-children">
                                 <a href="{{url('../server.php/blog')}}">Pages.</a>
                                 <ul class="sub-menu">
-                                    <li><a href="https://seoul-html.itech-theme.com/about.html">About</a></li>
+                                    <li><a href="{{url('about-us')}}">About</a></li>
                                     <li><a href="{{url('../server.php/contacts-us')}}">Contact</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="https://seoul-html.itech-theme.com/blog.html#Level3">Testimonials</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://seoul-html.itech-theme.com/testimonials.html">Testimonials</a></li>
-                                            <li><a href="https://seoul-html.itech-theme.com/testimonials-s2.html">Testimonials style 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        
-                                    </li>
+                                    
                                     <li><a href="{{url('../server.php/team')}}">Team</a></li>
                                     
                                     
-                                    <li><a href="https://seoul-html.itech-theme.com/pricing.html">Pricing</a></li>
+                                    <li><a href="{{url('pricing')}}">Pricing</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
@@ -132,15 +123,15 @@
                             <li class="menu-item-has-children">
                                 <a href="https://seoul-html.itech-theme.com/blog.html#">Pages.</a>
                                 <ul class="sub-menu">
-                                    <li><a href="https://seoul-html.itech-theme.com/about.html">About</a></li>
+                                    <li><a href="{{url('about')}}">Aboutrs</a></li>
                                     <li><a href="https://seoul-html.itech-theme.com/contact.html">Contact</a></li>
-                                    <li class="menu-item-has-children">
+                                   <!--  <li class="menu-item-has-children">
                                         <a href="https://seoul-html.itech-theme.com/blog.html#Level3">Testimonials</a>
                                         <ul class="sub-menu">
                                             <li><a href="https://seoul-html.itech-theme.com/testimonials.html">Testimonials</a></li>
                                             <li><a href="https://seoul-html.itech-theme.com/testimonials-s2.html">Testimonials style 2</a></li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                     <li class="menu-item-has-children">
                                         <a href="https://seoul-html.itech-theme.com/blog.html#Level3">Case studies</a>
                                         <ul class="sub-menu">

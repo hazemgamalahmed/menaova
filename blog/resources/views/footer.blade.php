@@ -98,6 +98,7 @@
 
     <!-- All JavaScript files
     ================================================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ URL::asset('../public/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('../public/bootstrap.min.js') }}"></script>
 

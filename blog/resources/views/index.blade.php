@@ -12,7 +12,7 @@
                 <div class="hero-inner">
                     <div class="container">
                         <div class="slide-title">
-                            <h2> much traffic should you actually be getting!</h2>
+                            <h2>  traffic should you actually be getting!</h2>
                         </div>
                         <div class="slide-text">
                             <p> frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole</p>
