@@ -31,6 +31,15 @@ class postController extends Controller
     	$myposts = Posts::orderBy('id', 'desc')->paginate(10);
     	return view('blogs', ['myposts'=>$myposts]);
     }
+    public function showdataInindex(){
+        $myindex = Posts::orderBy('id', 'desc')->paginate(3);
+        return view('index', ['myindex'=>$myindex]);
+    }
+    public function fetchAdminData()
+    {
+        $adminData = Posts::orderBy('id', 'desc')->get();
+        return view('admin', ['admin'=>$adminData]);
+    }
     public function showsinglePost($id)
     {
         $show = Posts::find($id);
@@ -42,5 +51,25 @@ class postController extends Controller
         $next_id = Posts::where('id', '>', $show->id)->min('id');
 
         return view('blog-single', ['mysingle'=>$show, 'prev_man'=>$prev_man, 'next_man'=>$next_man, 'prev_id'=>$prev_id, 'next_id'=>$next_id]);
+    }
+    public function deleteData($id=null)
+    {
+        if($id != null)
+        {
+            $del = Posts::find($id);
+            $del->delete();
+        }else if(request()->has('softdelete') and request()->has('id')){
+            Posts::destroy(request('id'));
+        }else if(request()->has('restore') and request()->has('id')){
+            Posts::whereIn('id', request('id'))->restore();
+        }else if(request()->has('forcedelete') and request()->has('id')){
+            Posts::whereIn('id', request('id'))->forceDelete();
+        }
+        return back();
+    }
+    public function showDeletedData()
+    {
+        $all_deletes = Posts::onlyTrashed()->orderBy('id', 'desc')->get();
+        return view('recycle', ['deletes'=>$all_deletes]);
     }
 }

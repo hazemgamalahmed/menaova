@@ -95,12 +95,7 @@
                             </li>
                             <li class="menu-item-has-children current-menu-parent">
                                 <a href="{{url('../server.php/blog')}}">Blog</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item-has-children">
-                                        <a href="{{url('../server.php/blog-single')}}">Blog single</a>
-                                       
-                                    </li>
-                                </ul>
+                               
                             </li>
                             
                             <li><a href="{{url('../server.php/contacts-us')}}">Contact</a></li>

@@ -81,12 +81,7 @@
                             </li>
                             <li class="menu-item-has-children current-menu-parent">
                                 <a href="{{url('../server.php/blog')}}">Blog</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item-has-children">
-                                        <a href="{{url('../server.php/blog-single')}}">Blog single</a>
-                                       
-                                    </li>
-                                </ul>
+                              
                             </li>
                             
                             <li><a href="{{url('../server.php/contacts-us')}}">Contact</a></li>
@@ -111,75 +106,33 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-left navigation-holder">
                         <button class="close-navbar"><i class="ti-close"></i></button>
-                        <ul class="nav navbar-nav">
+                          <ul class="nav navbar-nav">
                             <li class="menu-item-has-children">
-                                <a href="https://seoul-html.itech-theme.com/blog.html#">Home.</a>
+                                <a href="{{url('/')}}">Home.</a>
+                                
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{{url('../server.php/blog')}}">Pages.</a>
                                 <ul class="sub-menu">
-                                    <li><a href="https://seoul-html.itech-theme.com/index.html">Home style 1</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/index-2.html">Home style 2</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/index-3.html">Home style 3</a></li>
+                                    <li><a href="{{url('about-us')}}">About</a></li>
+                                    <li><a href="{{url('../server.php/contacts-us')}}">Contact</a></li>
+                                    
+                                    <li><a href="{{url('../server.php/team')}}">Team</a></li>
+                                    
+                                    
+                                    <li><a href="{{url('pricing')}}">Pricing</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="https://seoul-html.itech-theme.com/blog.html#">Pages.</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{{url('about')}}">Aboutrs</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/contact.html">Contact</a></li>
-                                   <!--  <li class="menu-item-has-children">
-                                        <a href="https://seoul-html.itech-theme.com/blog.html#Level3">Testimonials</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://seoul-html.itech-theme.com/testimonials.html">Testimonials</a></li>
-                                            <li><a href="https://seoul-html.itech-theme.com/testimonials-s2.html">Testimonials style 2</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <li class="menu-item-has-children">
-                                        <a href="https://seoul-html.itech-theme.com/blog.html#Level3">Case studies</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://seoul-html.itech-theme.com/portfolio.html">Case studies</a></li>
-                                            <li><a href="https://seoul-html.itech-theme.com/project-single.html">Case studies single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="https://seoul-html.itech-theme.com/team.html">Team</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/faq.html">FAQ</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/404.html">404</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/pricing.html">Pricing</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="https://seoul-html.itech-theme.com/blog.html#">Services.</a>
-                                <ul class="sub-menu">
-                                    <li><a href="https://seoul-html.itech-theme.com/services.html">Services</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/services-s2.html">Services style 2</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/services-s3.html">Services style 3</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/seo.html">Search engine optimization</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/smm.html">Social media marketing</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/content-merketing.html">Content Merketing</a></li>
-                                </ul>
+                                <a href="{{url('../server.php/services')}}">Services.</a>
+                                
                             </li>
                             <li class="menu-item-has-children current-menu-parent">
-                                <a href="https://seoul-html.itech-theme.com/blog.html#">Blog</a>
-                                <ul class="sub-menu">
-                                    <li class="current-menu-item"><a href="https://seoul-html.itech-theme.com/blog.html">Blog</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog-left-sidebar.html">Blog Left sidebar</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/blog-fullwidth.html">Blog full width</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="https://seoul-html.itech-theme.com/blog.html#Level3">Blog single</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="https://seoul-html.itech-theme.com/blog-single.html">Blog single</a></li>
-                                            <li><a href="https://seoul-html.itech-theme.com/blog-single-left-sidebar.html">Blog single Left sidebar</a></li>
-                                            <li><a href="https://seoul-html.itech-theme.com/blog-single-fullwidth.html">Blog single full width</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <a href="{{url('../server.php/blog')}}">Blog</a>
+                              
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="https://seoul-html.itech-theme.com/blog.html#">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="https://seoul-html.itech-theme.com/shop.html">Shop</a></li>
-                                    <li><a href="https://seoul-html.itech-theme.com/shop-single.html">Shop single</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="https://seoul-html.itech-theme.com/contact.html">Contact</a></li>
+                            
+                            <li><a href="{{url('../server.php/contacts-us')}}">Contact</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
                     
