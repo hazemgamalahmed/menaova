@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Posts;
+use App\services;
 class postController extends Controller
 {
     public function addPost(Request $request){
@@ -33,7 +34,8 @@ class postController extends Controller
     }
     public function showdataInindex(){
         $myindex = Posts::orderBy('id', 'desc')->paginate(3);
-        return view('index', ['myindex'=>$myindex]);
+        $all_services = services::orderBy('id', 'desc')->paginate(6);
+        return view('index', ['myindex'=>$myindex, 'services'=>$all_services]);
     }
     public function fetchAdminData()
     {
@@ -72,4 +74,25 @@ class postController extends Controller
         $all_deletes = Posts::onlyTrashed()->orderBy('id', 'desc')->get();
         return view('recycle', ['deletes'=>$all_deletes]);
     }
+    public function addService(Request $request)
+    {
+        $service = new services;
+        $service->title = $request->input('title');
+        $service->description = $request->input('content');
+        if($request->has('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.'.$extension;
+            $file->move('ourUploads/file', $filename);
+            $service->image = $filename;
+        }else{
+            return $request;
+            $service->image = '';
+        }
+        $service->user_id = auth()->user()->id;
+        $service->save();
+        return back();
+    }
+
+
 }

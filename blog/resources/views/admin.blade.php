@@ -49,5 +49,6 @@
 	<input type="submit" name="submit" value="submit" class="btn btn-primary">
 </form>
 </div>
+<h1><a href="{{url('my/services')}}">services</a></h1>
 <h1><a href="{{url('recycle')}}">recycle bin</a></h1>
 @endsection

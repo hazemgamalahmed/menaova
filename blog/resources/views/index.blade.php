@@ -93,36 +93,38 @@
                 <div class="row">
                     <div class="col col-xs-12">
                         <div class="service-grids">
+                            @foreach($services as $serve)
                             <div class="grid">
-                                <i class="fi flaticon-rocket"></i>
-                                <h3><a href="https://seoul-html.itech-theme.com/index.html#">SEO Optimization</a></h3>
-                                <p>Magazine and housed in a gilded in frame. It showed a lady fitted wifur hat and fur who sat upright</p>
+                                <img src="ourUploads/file/{{$serve->image}}">
+                                <h3>{{$serve->title}}</h3>
+                                <p>{{$serve->description}}</p>
                             </div>
-                            <div class="grid">
+                            @endforeach
+                            <!-- <div class="grid">
                                 <i class="fi flaticon-content"></i>
                                 <h3><a href="https://seoul-html.itech-theme.com/index.html#">Content Marketing</a></h3>
                                 <p>Magazine and housed in a gilded in frame. It showed a lady fitted wifur hat and fur who sat upright</p>
-                            </div>
-                            <div class="grid">
+                            </div> -->
+                           <!--  <div class="grid">
                                 <i class="fi flaticon-email"></i>
                                 <h3><a href="https://seoul-html.itech-theme.com/index.html#">Email Marketing</a></h3>
                                 <p>Magazine and housed in a gilded in frame. It showed a lady fitted wifur hat and fur who sat upright</p>
-                            </div>
-                            <div class="grid">
+                            </div> -->
+                          <!--   <div class="grid">
                                 <i class="fi flaticon-facebook"></i>
                                 <h3><a href="https://seoul-html.itech-theme.com/index.html#">Social Marketing</a></h3>
                                 <p>Magazine and housed in a gilded in frame. It showed a lady fitted wifur hat and fur who sat upright</p>
-                            </div>
-                            <div class="grid">
+                            </div> -->
+                           <!--  <div class="grid">
                                 <i class="fi flaticon-strategy"></i>
                                 <h3><a href="https://seoul-html.itech-theme.com/index.html#">PPC Marketing</a></h3>
                                 <p>Magazine and housed in a gilded in frame. It showed a lady fitted wifur hat and fur who sat upright</p>
-                            </div>
-                            <div class="grid">
+                            </div> -->
+                            <!-- <div class="grid">
                                 <i class="fi flaticon-chain"></i>
                                 <h3><a href="https://seoul-html.itech-theme.com/index.html#">Link Building</a></h3>
                                 <p>Magazine and housed in a gilded in frame. It showed a lady fitted wifur hat and fur who sat upright</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
