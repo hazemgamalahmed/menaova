@@ -13,19 +13,13 @@
 Route::pattern('id', '[0-9]+');
 Route::pattern('title', '[a-zA-Z]+');
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+
 Route::get('/', 'postController@showdataInindex');
-// Route::get('blog', function(){
-// 	return view('blogs');
-// });
+
 Route::get('services', function(){
 	return view('services');
 });
-// Route::get('blog-single', function(){
-// 	return view('blog-single');
-// });
+
 Route::get('blog-single/{id?}/{title?}', 'postController@showsinglePost');
 Route::get('contacts-us', function(){
 	return view('contacts-us');
@@ -45,16 +39,15 @@ Route::group(['middleware'=>'guest'], function(){
 });
 
 Route::group(['middleware'=>'news'], function(){
-	// Route::get('admin', function(){
-	// 	return view('admin');
-	// });
 	Route::get('admin', 'postController@fetchAdminData');
 	Route::post('add/post', 'postController@addPost');
-	// Route::get('recycle', function(){
-	// 	return view('recycle');
-	// });
+	
 	Route::get('recycle', 'postController@showDeletedData');
 	Route::delete('delete/data', 'postController@deleteData');
+	Route::get('my/services', function(){
+		return view('work');
+	});
+	Route::post('add/serves', 'postController@addService');
 });
 Route::get('blog', 'postController@showdata');
 Route::post('insert/message', 'visitorController@insertData');

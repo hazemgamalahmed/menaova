@@ -94,7 +94,7 @@
                                 
                             </li>
                             <li class="menu-item-has-children current-menu-parent">
-                                <a href="{{url('../server.php/blog')}}">Blog</a>
+                                <a href="{{url('../server.php/blog')}}">content</a>
                                
                             </li>
                             
