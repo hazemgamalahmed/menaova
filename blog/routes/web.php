@@ -44,9 +44,15 @@ Route::group(['middleware'=>'news'], function(){
 	
 	Route::get('recycle', 'postController@showDeletedData');
 	Route::delete('delete/data', 'postController@deleteData');
-	Route::get('my/services', function(){
-		return view('work');
-	});
+	Route::delete('delete/serve', 'postController@deleteServeData');
+	// Route::get('my/services', function(){
+	// 	return view('work');
+	// });
+	// Route::get('our/work', function(){
+	// 	return view('admin-serve');
+	// });
+	Route::get('our/work', 'postController@showDeletedServices');
+	Route::get('my/services', 'postController@getServicesAdmin');
 	Route::post('add/serves', 'postController@addService');
 });
 Route::get('blog', 'postController@showdata');

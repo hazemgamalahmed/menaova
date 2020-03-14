@@ -69,6 +69,21 @@ class postController extends Controller
         }
         return back();
     }
+     public function deleteServeData($id=null)
+    {
+        if($id != null)
+        {
+            $del = services::find($id);
+            $del->delete();
+        }else if(request()->has('softdelete') and request()->has('id')){
+            services::destroy(request('id'));
+        }else if(request()->has('restore') and request()->has('id')){
+            services::whereIn('id', request('id'))->restore();
+        }else if(request()->has('forcedelete') and request()->has('id')){
+            services::whereIn('id', request('id'))->forceDelete();
+        }
+        return back();
+    }
     public function showDeletedData()
     {
         $all_deletes = Posts::onlyTrashed()->orderBy('id', 'desc')->get();
@@ -93,6 +108,13 @@ class postController extends Controller
         $service->save();
         return back();
     }
-
+    public function getServicesAdmin(){
+        $all_services = services::orderBy('id', 'desc')->get();
+        return view('work', ['admin_ser'=>$all_services]);
+    }
+    public function showDeletedServices(){
+        $all_deleted_serve = services::onlyTrashed()->orderBy('id', 'desc')->get();
+        return view('admin-serve', ['all_dels'=>$all_deleted_serve]);
+    }
 
 }
